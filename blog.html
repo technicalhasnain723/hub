@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — Hasnain</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="preloader"><div class="preloader-spinner"></div></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-bracket">&lt;</span>Hasnain<span class="logo-bracket">/&gt;</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="blog.html" class="nav-link active">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="projects.html" class="mobile-link">Projects</a>
+        <a href="blog.html" class="mobile-link active">Blog</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
+    </div>
+
+    <main class="page-header">
+        <div class="container">
+            <span class="page-tag">Thoughts & Ideas</span>
+            <h1 class="page-title">Blog</h1>
+            <p class="page-desc">Sharing my journey, tutorials, and thoughts on web development</p>
+        </div>
+    </main>
+
+    <section class="blog-section">
+        <div class="container">
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="blog-placeholder" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">
+                            <span>🎨</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">Aug 10, 2026</span>
+                            <span class="blog-category">Tutorial</span>
+                        </div>
+                        <h3>Building Smooth Animations with Pure CSS</h3>
+                        <p>Learn how to create buttery-smooth animations without any JavaScript libraries. We'll cover keyframes, transitions, and performance optimization.</p>
+                        <a href="#" class="blog-read">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="blog-placeholder" style="background: linear-gradient(135deg, #ec4899, #f43f5e);">
+                            <span>⚡</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">Jul 28, 2026</span>
+                            <span class="blog-category">JavaScript</span>
+                        </div>
+                        <h3>Canvas API: Drawing Spider-Man from Scratch</h3>
+                        <p>A deep dive into the HTML5 Canvas API by building an interactive Spider-Man mask that follows your cursor with realistic eye tracking.</p>
+                        <a href="#" class="blog-read">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="blog-placeholder" style="background: linear-gradient(135deg, #10b981, #06b6d4);">
+                            <span>💡</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">Jul 15, 2026</span>
+                            <span class="blog-category">Thoughts</span>
+                        </div>
+                        <h3>Why I Love Creating Interactive Web Experiences</h3>
+                        <p>The web is more than just information — it's an experience. Here's why I believe in building websites that people remember.</p>
+                        <a href="#" class="blog-read">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="blog-placeholder" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">
+                            <span>🎂</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">Jun 30, 2026</span>
+                            <span class="blog-category">Project</span>
+                        </div>
+                        <h3>Creating the Ultimate Birthday Wish Website</h3>
+                        <p>How I built an animated birthday celebration page with balloons, confetti, and a flickering candle using only HTML, CSS, and JavaScript.</p>
+                        <a href="#" class="blog-read">Read More →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo-bracket">&lt;</span>Hasnain<span class="logo-bracket">/&gt;</span>
+                    </a>
+                    <p>Building the web, one pixel at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://github.com/technicalhasnain723" target="_blank">GitHub</a>
+                    <a href="https://instagram.com/technical_.hasnain" target="_blank">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Hasnain. Crafted with ❤️ and lots of ☕</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
