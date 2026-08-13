@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — Hasnain</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="preloader"><div class="preloader-spinner"></div></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-bracket">&lt;</span>Hasnain<span class="logo-bracket">/&gt;</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="projects.html" class="nav-link active">Projects</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="projects.html" class="mobile-link active">Projects</a>
+        <a href="blog.html" class="mobile-link">Blog</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
+    </div>
+
+    <main class="page-header">
+        <div class="container">
+            <span class="page-tag">My Work</span>
+            <h1 class="page-title">Projects</h1>
+            <p class="page-desc">A collection of my creative coding experiments and web applications</p>
+        </div>
+    </main>
+
+    <section class="projects-section">
+        <div class="container">
+            <!-- Project 1: Spider-Man -->
+            <div class="project-showcase" id="spidermanProject">
+                <div class="project-info">
+                    <span class="project-number">01</span>
+                    <h2>Spider-Man Mouse Follower</h2>
+                    <p>An interactive Spider-Man mask built entirely with HTML5 Canvas. The mask follows your mouse cursor, and the eyes track your movement with a realistic parallax effect. Pure JavaScript — no images, no libraries.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML5 Canvas</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Animation</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="toggleDemo('spidermanDemo')">Try Demo</button>
+                </div>
+                <div class="project-demo" id="spidermanDemo">
+                    <canvas id="spidermanCanvas"></canvas>
+                    <div class="demo-hint">Move your mouse around!</div>
+                </div>
+            </div>
+
+            <!-- Project 2: Animated Proposal -->
+            <div class="project-showcase reverse" id="proposalProject">
+                <div class="project-info">
+                    <span class="project-number">02</span>
+                    <h2>Animated Proposal</h2>
+                    <p>A romantic web experience featuring falling rose petals, floating hearts, and a typewriter proposal message. The "No" button playfully runs away when hovered. Built with CSS animations and JavaScript.</p>
+                    <div class="project-tags">
+                        <span class="tag">CSS Animation</span>
+                        <span class="tag">Interactive</span>
+                        <span class="tag">Romantic</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="toggleDemo('proposalDemo')">Try Demo</button>
+                </div>
+                <div class="project-demo" id="proposalDemo">
+                    <div class="proposal-scene">
+                        <div class="petals-container" id="petalsContainer"></div>
+                        <div class="hearts-container" id="heartsContainer"></div>
+                        <div class="proposal-content">
+                            <div class="proposal-rose">🌹</div>
+                            <h3 id="proposalText"></h3>
+                            <div class="proposal-buttons" id="proposalButtons" style="display:none;">
+                                <button class="btn-yes" onclick="sayYes()">Yes! 💍</button>
+                                <button class="btn-no" id="btnNo" onmouseover="runAway()">No</button>
+                            </div>
+                            <div class="proposal-result" id="proposalResult"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Birthday Wishes -->
+            <div class="project-showcase" id="birthdayProject">
+                <div class="project-info">
+                    <span class="project-number">03</span>
+                    <h2>Birthday Wishes</h2>
+                    <p>Celebrate someone's special day with this animated birthday card. Features floating balloons, confetti explosions, a flickering candle, and a personalized message. Customize the name and make someone's day!</p>
+                    <div class="project-tags">
+                        <span class="tag">Celebration</span>
+                        <span class="tag">Canvas</span>
+                        <span class="tag">Interactive</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="toggleDemo('birthdayDemo')">Try Demo</button>
+                </div>
+                <div class="project-demo" id="birthdayDemo">
+                    <div class="birthday-scene">
+                        <div class="balloons-container" id="balloonsContainer"></div>
+                        <div class="confetti-container" id="confettiContainer"></div>
+                        <div class="birthday-content">
+                            <div class="birthday-cake">
+                                <div class="cake-base">🎂</div>
+                                <div class="candle-flame" id="candleFlame">🔥</div>
+                            </div>
+                            <h3>Happy Birthday! 🎉</h3>
+                            <p id="birthdayName">To someone special</p>
+                            <button class="btn btn-primary" onclick="celebrate()">Celebrate!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Projects Grid (for user to add their own) -->
+    <section class="more-projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">More Work</span>
+                <h2 class="section-title">Other Projects</h2>
+                <p class="section-desc">Add your own projects here — this section is ready for your creations</p>
+            </div>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Template for adding new projects -->
+                <div class="project-card placeholder">
+                    <div class="project-card-image">
+                        <span>+</span>
+                    </div>
+                    <div class="project-card-content">
+                        <h4>Your Project Here</h4>
+                        <p>Add your project by editing this section in projects.html</p>
+                        <div class="project-card-tags">
+                            <span>Tag1</span>
+                            <span>Tag2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo-bracket">&lt;</span>Hasnain<span class="logo-bracket">/&gt;</span>
+                    </a>
+                    <p>Building the web, one pixel at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://github.com/technicalhasnain723" target="_blank">GitHub</a>
+                    <a href="https://instagram.com/technical_.hasnain" target="_blank">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Hasnain. Crafted with ❤️ and lots of ☕</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
