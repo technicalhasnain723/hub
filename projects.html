@@ -6,6 +6,7 @@
     <title>Projects — Hasnain</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<base target="_blank">
 </head>
 <body>
     <div class="preloader"><div class="preloader-spinner"></div></div>
@@ -49,118 +50,267 @@
 
     <main class="page-header">
         <div class="container">
-            <span class="page-tag">My Work</span>
-            <h1 class="page-title">Projects</h1>
-            <p class="page-desc">A collection of my creative coding experiments and web applications</p>
+            <span class="page-tag">Portfolio</span>
+            <h1 class="page-title">My Projects</h1>
+            <p class="page-desc">A curated collection of my best work — from interactive animations to full web applications</p>
         </div>
     </main>
 
-    <section class="projects-section">
+    <!-- Filter Tabs -->
+    <section class="filter-section">
         <div class="container">
-            <!-- Project 1: Spider-Man -->
-            <div class="project-showcase" id="spidermanProject">
-                <div class="project-info">
-                    <span class="project-number">01</span>
-                    <h2>Spider-Man Mouse Follower</h2>
-                    <p>An interactive Spider-Man mask built entirely with HTML5 Canvas. The mask follows your mouse cursor, and the eyes track your movement with a realistic parallax effect. Pure JavaScript — no images, no libraries.</p>
-                    <div class="project-tags">
-                        <span class="tag">HTML5 Canvas</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">Animation</span>
-                    </div>
-                    <button class="btn btn-primary" onclick="toggleDemo('spidermanDemo')">Try Demo</button>
-                </div>
-                <div class="project-demo" id="spidermanDemo">
-                    <canvas id="spidermanCanvas"></canvas>
-                    <div class="demo-hint">Move your mouse around!</div>
-                </div>
-            </div>
-
-            <!-- Project 2: Animated Proposal -->
-            <div class="project-showcase reverse" id="proposalProject">
-                <div class="project-info">
-                    <span class="project-number">02</span>
-                    <h2>Animated Proposal</h2>
-                    <p>A romantic web experience featuring falling rose petals, floating hearts, and a typewriter proposal message. The "No" button playfully runs away when hovered. Built with CSS animations and JavaScript.</p>
-                    <div class="project-tags">
-                        <span class="tag">CSS Animation</span>
-                        <span class="tag">Interactive</span>
-                        <span class="tag">Romantic</span>
-                    </div>
-                    <button class="btn btn-primary" onclick="toggleDemo('proposalDemo')">Try Demo</button>
-                </div>
-                <div class="project-demo" id="proposalDemo">
-                    <div class="proposal-scene">
-                        <div class="petals-container" id="petalsContainer"></div>
-                        <div class="hearts-container" id="heartsContainer"></div>
-                        <div class="proposal-content">
-                            <div class="proposal-rose">🌹</div>
-                            <h3 id="proposalText"></h3>
-                            <div class="proposal-buttons" id="proposalButtons" style="display:none;">
-                                <button class="btn-yes" onclick="sayYes()">Yes! 💍</button>
-                                <button class="btn-no" id="btnNo" onmouseover="runAway()">No</button>
-                            </div>
-                            <div class="proposal-result" id="proposalResult"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 3: Birthday Wishes -->
-            <div class="project-showcase" id="birthdayProject">
-                <div class="project-info">
-                    <span class="project-number">03</span>
-                    <h2>Birthday Wishes</h2>
-                    <p>Celebrate someone's special day with this animated birthday card. Features floating balloons, confetti explosions, a flickering candle, and a personalized message. Customize the name and make someone's day!</p>
-                    <div class="project-tags">
-                        <span class="tag">Celebration</span>
-                        <span class="tag">Canvas</span>
-                        <span class="tag">Interactive</span>
-                    </div>
-                    <button class="btn btn-primary" onclick="toggleDemo('birthdayDemo')">Try Demo</button>
-                </div>
-                <div class="project-demo" id="birthdayDemo">
-                    <div class="birthday-scene">
-                        <div class="balloons-container" id="balloonsContainer"></div>
-                        <div class="confetti-container" id="confettiContainer"></div>
-                        <div class="birthday-content">
-                            <div class="birthday-cake">
-                                <div class="cake-base">🎂</div>
-                                <div class="candle-flame" id="candleFlame">🔥</div>
-                            </div>
-                            <h3>Happy Birthday! 🎉</h3>
-                            <p id="birthdayName">To someone special</p>
-                            <button class="btn btn-primary" onclick="celebrate()">Celebrate!</button>
-                        </div>
-                    </div>
-                </div>
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">All</button>
+                <button class="filter-tab" data-filter="animation">Animation</button>
+                <button class="filter-tab" data-filter="interactive">Interactive</button>
+                <button class="filter-tab" data-filter="webapp">Web App</button>
             </div>
         </div>
     </section>
 
-    <!-- More Projects Grid (for user to add their own) -->
-    <section class="more-projects">
+    <!-- Projects Grid -->
+    <section class="projects-grid-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">More Work</span>
-                <h2 class="section-title">Other Projects</h2>
-                <p class="section-desc">Add your own projects here — this section is ready for your creations</p>
-            </div>
-            <div class="projects-grid" id="projectsGrid">
-                <!-- Template for adding new projects -->
-                <div class="project-card placeholder">
-                    <div class="project-card-image">
-                        <span>+</span>
-                    </div>
-                    <div class="project-card-content">
-                        <h4>Your Project Here</h4>
-                        <p>Add your project by editing this section in projects.html</p>
-                        <div class="project-card-tags">
-                            <span>Tag1</span>
-                            <span>Tag2</span>
+            <div class="projects-grid-v2">
+
+                <!-- Project 1: Spider-Man -->
+                <article class="project-card-v2" data-category="animation interactive">
+                    <div class="project-card-visual">
+                        <div class="project-preview" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);">
+                            <div class="preview-spiderman">
+                                <div class="spidey-head">
+                                    <div class="spidey-eye left"></div>
+                                    <div class="spidey-eye right"></div>
+                                    <div class="spidey-web"></div>
+                                </div>
+                            </div>
+                            <div class="preview-overlay">
+                                <button class="preview-btn" onclick="openModal('spiderman')">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                        <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                    Live Preview
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div class="project-card-body">
+                        <div class="project-card-meta">
+                            <span class="project-category">Animation</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <h3 class="project-card-title">Spider-Man Mouse Follower</h3>
+                        <p class="project-card-desc">An interactive Spider-Man mask built entirely with HTML5 Canvas. Features realistic eye tracking, head tilt physics, and web pattern rendering — all drawn programmatically with zero images.</p>
+                        <div class="project-card-tech">
+                            <span>HTML5 Canvas</span>
+                            <span>JavaScript</span>
+                            <span>Animation</span>
+                        </div>
+                        <div class="project-card-actions">
+                            <a href="#" class="project-link" onclick="openModal('spiderman'); return false;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                    <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                </svg>
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/technicalhasnain723" target="_blank" class="project-link secondary">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: Animated Proposal -->
+                <article class="project-card-v2" data-category="interactive animation">
+                    <div class="project-card-visual">
+                        <div class="project-preview" style="background: linear-gradient(135deg, #2d1b4e 0%, #1a0a2e 50%, #4a1c40 100%);">
+                            <div class="preview-proposal">
+                                <div class="preview-rose">🌹</div>
+                                <div class="preview-hearts">
+                                    <span>❤️</span><span>💖</span><span>💕</span>
+                                </div>
+                            </div>
+                            <div class="preview-overlay">
+                                <button class="preview-btn" onclick="openModal('proposal')">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                        <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                    Live Preview
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <div class="project-card-meta">
+                            <span class="project-category">Interactive</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <h3 class="project-card-title">Animated Proposal</h3>
+                        <p class="project-card-desc">A romantic web experience with falling rose petals, floating hearts, and a typewriter proposal message. The "No" button playfully runs away on hover. Built with pure CSS animations and JavaScript.</p>
+                        <div class="project-card-tech">
+                            <span>CSS Animation</span>
+                            <span>JavaScript</span>
+                            <span>Interactive</span>
+                        </div>
+                        <div class="project-card-actions">
+                            <a href="#" class="project-link" onclick="openModal('proposal'); return false;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                    <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                </svg>
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/technicalhasnain723" target="_blank" class="project-link secondary">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: Birthday Wishes -->
+                <article class="project-card-v2" data-category="interactive animation">
+                    <div class="project-card-visual">
+                        <div class="project-preview" style="background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%);">
+                            <div class="preview-birthday">
+                                <div class="preview-cake">
+                                    <span>🎂</span>
+                                    <div class="preview-flame">🔥</div>
+                                </div>
+                                <div class="preview-confetti">
+                                    <span style="--d:0s">🎉</span>
+                                    <span style="--d:0.3s">🎊</span>
+                                    <span style="--d:0.6s">✨</span>
+                                </div>
+                            </div>
+                            <div class="preview-overlay">
+                                <button class="preview-btn" onclick="openModal('birthday')">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                        <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                    Live Preview
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <div class="project-card-meta">
+                            <span class="project-category">Interactive</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <h3 class="project-card-title">Birthday Wishes</h3>
+                        <p class="project-card-desc">An animated birthday celebration featuring floating balloons, confetti explosions, a flickering candle, and personalized messages. Customize the name and make someone's day special with pure code.</p>
+                        <div class="project-card-tech">
+                            <span>Canvas API</span>
+                            <span>CSS Animation</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-card-actions">
+                            <a href="#" class="project-link" onclick="openModal('birthday'); return false;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                    <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                </svg>
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/technicalhasnain723" target="_blank" class="project-link secondary">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4: Placeholder for user's future project -->
+                <article class="project-card-v2" data-category="webapp">
+                    <div class="project-card-visual">
+                        <div class="project-preview" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);">
+                            <div class="preview-placeholder">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                    <path d="M3 9h18M9 21V9"/>
+                                </svg>
+                                <span>Your Project</span>
+                            </div>
+                            <div class="preview-overlay">
+                                <button class="preview-btn" style="opacity:0.5;cursor:default;">
+                                    Coming Soon
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <div class="project-card-meta">
+                            <span class="project-category">Web App</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <h3 class="project-card-title">Project Title</h3>
+                        <p class="project-card-desc">Add your own project description here. This is a placeholder card — replace it with your real project details, image, and links.</p>
+                        <div class="project-card-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-card-actions">
+                            <span class="project-link disabled">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                    <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                </svg>
+                                Live Demo
+                            </span>
+                            <span class="project-link secondary disabled">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                Source Code
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div class="project-modal" id="projectModal">
+        <div class="modal-backdrop" onclick="closeModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Have a project idea?</h2>
+                <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
+                <a href="contact.html" class="btn btn-primary">
+                    Let's Talk
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14m-7-7l7 7-7 7"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
