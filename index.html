@@ -3,35 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hasnain — Developer & Creator</title>
+    <title>Projects — Hasnain</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<base target="_blank">
 </head>
 <body>
-    <!-- Preloader -->
-    <div class="preloader">
-        <div class="preloader-spinner"></div>
-    </div>
-
-    <!-- Custom Cursor -->
+    <div class="preloader"><div class="preloader-spinner"></div></div>
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
 
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
                 <span class="logo-bracket">&lt;</span>Hasnain<span class="logo-bracket">/&gt;</span>
             </a>
-            
             <div class="nav-links">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="projects.html" class="nav-link active">Projects</a>
                 <a href="blog.html" class="nav-link">Blog</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
-
             <div class="nav-actions">
                 <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                     <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -43,173 +35,286 @@
                     </svg>
                 </button>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span></span><span></span><span></span>
                 </button>
             </div>
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
-        <a href="index.html" class="mobile-link active">Home</a>
-        <a href="projects.html" class="mobile-link">Projects</a>
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="projects.html" class="mobile-link active">Projects</a>
         <a href="blog.html" class="mobile-link">Blog</a>
         <a href="contact.html" class="mobile-link">Contact</a>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-particles" id="particles"></div>
-        <div class="hero-content">
-            <div class="hero-badge">
-                <span class="badge-dot"></span>
-                Available for freelance
+    <main class="page-header">
+        <div class="container">
+            <span class="page-tag">Portfolio</span>
+            <h1 class="page-title">My Projects</h1>
+            <p class="page-desc">A curated collection of my best work — from interactive animations to full web applications</p>
+        </div>
+    </main>
+
+    <!-- Filter Tabs -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">All</button>
+                <button class="filter-tab" data-filter="animation">Animation</button>
+                <button class="filter-tab" data-filter="interactive">Interactive</button>
+                <button class="filter-tab" data-filter="webapp">Web App</button>
             </div>
-            <h1 class="hero-title">
-                Hi, I'm <span class="gradient-text">Hasnain</span>
-            </h1>
-            <p class="hero-subtitle">
-                I build <span class="typing-text" id="typingText"></span><span class="typing-cursor">|</span>
-            </p>
-            <p class="hero-desc">
-                A passionate web developer crafting beautiful, interactive experiences. 
-                I turn ideas into reality through clean code and creative design.
-            </p>
-            <div class="hero-buttons">
-                <a href="projects.html" class="btn btn-primary">
-                    View My Work
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-grid-section">
+        <div class="container">
+            <div class="projects-grid-v2">
+
+                <!-- Project 1: Spider-Man -->
+                <article class="project-card-v2" data-category="animation interactive">
+                    <div class="project-card-visual">
+                        <div class="project-preview" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);">
+                            <div class="preview-spiderman">
+                                <div class="spidey-head">
+                                    <div class="spidey-eye left"></div>
+                                    <div class="spidey-eye right"></div>
+                                    <div class="spidey-web"></div>
+                                </div>
+                            </div>
+                            <div class="preview-overlay">
+                                <button class="preview-btn" onclick="openModal('spiderman')">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                        <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                    Live Preview
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <div class="project-card-meta">
+                            <span class="project-category">Animation</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <h3 class="project-card-title">Spider-Man Mouse Follower</h3>
+                        <p class="project-card-desc">An interactive Spider-Man mask built entirely with HTML5 Canvas. Features realistic eye tracking, head tilt physics, and web pattern rendering — all drawn programmatically with zero images.</p>
+                        <div class="project-card-tech">
+                            <span>HTML5 Canvas</span>
+                            <span>JavaScript</span>
+                            <span>Animation</span>
+                        </div>
+                        <div class="project-card-actions">
+                            <a href="#" class="project-link" onclick="openModal('spiderman'); return false;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                    <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                </svg>
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/technicalhasnain723" target="_blank" class="project-link secondary">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: Animated Proposal -->
+                <article class="project-card-v2" data-category="interactive animation">
+                    <div class="project-card-visual">
+                        <div class="project-preview" style="background: linear-gradient(135deg, #2d1b4e 0%, #1a0a2e 50%, #4a1c40 100%);">
+                            <div class="preview-proposal">
+                                <div class="preview-rose">🌹</div>
+                                <div class="preview-hearts">
+                                    <span>❤️</span><span>💖</span><span>💕</span>
+                                </div>
+                            </div>
+                            <div class="preview-overlay">
+                                <button class="preview-btn" onclick="openModal('proposal')">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                        <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                    Live Preview
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <div class="project-card-meta">
+                            <span class="project-category">Interactive</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <h3 class="project-card-title">Animated Proposal</h3>
+                        <p class="project-card-desc">A romantic web experience with falling rose petals, floating hearts, and a typewriter proposal message. The "No" button playfully runs away on hover. Built with pure CSS animations and JavaScript.</p>
+                        <div class="project-card-tech">
+                            <span>CSS Animation</span>
+                            <span>JavaScript</span>
+                            <span>Interactive</span>
+                        </div>
+                        <div class="project-card-actions">
+                            <a href="#" class="project-link" onclick="openModal('proposal'); return false;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                    <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                </svg>
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/technicalhasnain723" target="_blank" class="project-link secondary">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: Birthday Wishes -->
+                <article class="project-card-v2" data-category="interactive animation">
+                    <div class="project-card-visual">
+                        <div class="project-preview" style="background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%);">
+                            <div class="preview-birthday">
+                                <div class="preview-cake">
+                                    <span>🎂</span>
+                                    <div class="preview-flame">🔥</div>
+                                </div>
+                                <div class="preview-confetti">
+                                    <span style="--d:0s">🎉</span>
+                                    <span style="--d:0.3s">🎊</span>
+                                    <span style="--d:0.6s">✨</span>
+                                </div>
+                            </div>
+                            <div class="preview-overlay">
+                                <button class="preview-btn" onclick="openModal('birthday')">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                        <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                    Live Preview
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <div class="project-card-meta">
+                            <span class="project-category">Interactive</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <h3 class="project-card-title">Birthday Wishes</h3>
+                        <p class="project-card-desc">An animated birthday celebration featuring floating balloons, confetti explosions, a flickering candle, and personalized messages. Customize the name and make someone's day special with pure code.</p>
+                        <div class="project-card-tech">
+                            <span>Canvas API</span>
+                            <span>CSS Animation</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-card-actions">
+                            <a href="#" class="project-link" onclick="openModal('birthday'); return false;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                    <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                </svg>
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/technicalhasnain723" target="_blank" class="project-link secondary">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4: Placeholder for user's future project -->
+                <article class="project-card-v2" data-category="webapp">
+                    <div class="project-card-visual">
+                        <div class="project-preview" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);">
+                            <div class="preview-placeholder">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                    <path d="M3 9h18M9 21V9"/>
+                                </svg>
+                                <span>Your Project</span>
+                            </div>
+                            <div class="preview-overlay">
+                                <button class="preview-btn" style="opacity:0.5;cursor:default;">
+                                    Coming Soon
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <div class="project-card-meta">
+                            <span class="project-category">Web App</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <h3 class="project-card-title">Project Title</h3>
+                        <p class="project-card-desc">Add your own project description here. This is a placeholder card — replace it with your real project details, image, and links.</p>
+                        <div class="project-card-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-card-actions">
+                            <span class="project-link disabled">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                    <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                </svg>
+                                Live Demo
+                            </span>
+                            <span class="project-link secondary disabled">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                Source Code
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div class="project-modal" id="projectModal">
+        <div class="modal-backdrop" onclick="closeModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Have a project idea?</h2>
+                <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
+                <a href="contact.html" class="btn btn-primary">
+                    Let's Talk
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M5 12h14m-7-7l7 7-7 7"/>
                     </svg>
                 </a>
-                <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
-            </div>
-            <div class="hero-socials">
-                <a href="https://github.com/technicalhasnain723" target="_blank" class="social-link" aria-label="GitHub">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                </a>
-                <a href="https://instagram.com/technical_.hasnain" target="_blank" class="social-link" aria-label="Instagram">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-        <div class="hero-scroll">
-            <div class="scroll-indicator">
-                <span>Scroll</span>
-                <div class="scroll-line"></div>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number" data-count="50">0</div>
-                    <div class="stat-label">Projects Completed</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" data-count="3">0</div>
-                    <div class="stat-label">Years Experience</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" data-count="25">0</div>
-                    <div class="stat-label">Happy Clients</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" data-count="100">0</div>
-                    <div class="stat-label">Cups of Coffee</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Projects Preview -->
-    <section class="featured-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Featured Work</span>
-                <h2 class="section-title">Recent Projects</h2>
-                <p class="section-desc">A glimpse of what I've been building lately</p>
-            </div>
-            <div class="featured-grid">
-                <div class="featured-card">
-                    <div class="featured-image">
-                        <div class="featured-icon">🕷️</div>
-                    </div>
-                    <div class="featured-content">
-                        <span class="featured-tag">Animation</span>
-                        <h3>Spider-Man Mouse Follower</h3>
-                        <p>An interactive Spider-Man mask that tracks your mouse movement with realistic eye animations.</p>
-                        <a href="projects.html" class="featured-link">View Project →</a>
-                    </div>
-                </div>
-                <div class="featured-card">
-                    <div class="featured-image" style="background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);">
-                        <div class="featured-icon">🌹</div>
-                    </div>
-                    <div class="featured-content">
-                        <span class="featured-tag">Romantic</span>
-                        <h3>Animated Proposal</h3>
-                        <p>A beautiful animated proposal with falling rose petals, floating hearts, and an interactive yes/no.</p>
-                        <a href="projects.html" class="featured-link">View Project →</a>
-                    </div>
-                </div>
-                <div class="featured-card">
-                    <div class="featured-image" style="background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);">
-                        <div class="featured-icon">🎂</div>
-                    </div>
-                    <div class="featured-content">
-                        <span class="featured-tag">Celebration</span>
-                        <h3>Birthday Wishes</h3>
-                        <p>Celebrate special moments with animated balloons, confetti, and personalized birthday messages.</p>
-                        <a href="projects.html" class="featured-link">View Project →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="skills-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Expertise</span>
-                <h2 class="section-title">Tech Stack</h2>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">⚡</div>
-                    <h4>Frontend</h4>
-                    <p>HTML5, CSS3, JavaScript, React</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🎨</div>
-                    <h4>Design</h4>
-                    <p>Figma, UI/UX, Animations</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🔧</div>
-                    <h4>Tools</h4>
-                    <p>Git, GitHub, VS Code, Vercel</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">📱</div>
-                    <h4>Responsive</h4>
-                    <p>Mobile-first, Flexbox, Grid</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
