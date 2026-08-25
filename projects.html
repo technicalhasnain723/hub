@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — Hasnain</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<base target="_blank">
+</head>
+<body>
+    <div class="preloader"><div class="preloader-spinner"></div></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-bracket">&lt;</span>Hasnain<span class="logo-bracket">/&gt;</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="projects.html" class="nav-link active">Projects</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="projects.html" class="mobile-link active">Projects</a>
+        <a href="blog.html" class="mobile-link">Blog</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
+    </div>
+
+    <main class="page-header">
+        <div class="container">
+            <span class="page-tag">Portfolio</span>
+            <h1 class="page-title">My Projects</h1>
+            <p class="page-desc">A curated collection of my best work — click any project to see it live</p>
+        </div>
+    </main>
+
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">All</button>
+                <button class="filter-tab" data-filter="animation">Animation</button>
+                <button class="filter-tab" data-filter="interactive">Interactive</button>
+                <button class="filter-tab" data-filter="webapp">Web App</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects-grid-section">
+        <div class="container">
+            <div class="projects-grid-v2">
+
+                <!-- Project 1: Spider-Man -->
+                <article class="project-card-v2" data-category="animation interactive">
+                    <div class="project-card-visual">
+                        <div class="project-preview" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);">
+                            <div class="preview-spiderman">
+                                <div class="spidey-head">
+                                    <div class="spidey-eye left"></div>
+                                    <div class="spidey-eye right"></div>
+                                    <div class="spidey-web"></div>
+                                </div>
+                            </div>
+                            <div class="preview-overlay">
+                                <a href="projects/spider-animation/index.html" class="preview-btn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                        <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                    Open Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <div class="project-card-meta">
+                            <span class="project-category">Animation</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <h3 class="project-card-title">Spider animation </h3>
+                        <p class="project-card-desc">An interactive Spider-Man mask built entirely with HTML5 Canvas. Features realistic eye tracking, head tilt physics, and web pattern rendering — all drawn programmatically with zero images.</p>
+                        <div class="project-card-tech">
+                            <span>HTML5 Canvas</span>
+                            <span>JavaScript</span>
+                            <span>Animation</span>
+                        </div>
+                        <div class="project-card-actions">
+                            <a href="projects/spider-animation/index.html" class="project-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                    <path d="M15 3h6v6"/>
+                                    <path d="M10 14L21 3"/>
+                                </svg>
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/technicalhasnain723" target="_blank" class="project-link secondary">
+                                <img src="web img/25231.png" alt="GitHub" style="width:16px;height:16px;border-radius:50%;object-fit:cover;">
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: Animated Proposal -->
+                <article class="project-card-v2" data-category="interactive animation">
+                    <div class="project-card-visual">
+                        <div class="project-preview" style="background: linear-gradient(135deg, #2d1b4e 0%, #1a0a2e 50%, #4a1c40 100%);">
+                            <div class="preview-proposal">
+                                <div class="preview-rose">🌹</div>
+                                <div class="preview-hearts">
+                                    <span>❤️</span><span>💖</span><span>💕</span>
+                                </div>
+                            </div>
+                            <div class="preview-overlay">
+                                <a href="projects/animated-proposal/index.html" class="preview-btn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                        <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                    Open Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <div class="project-card-meta">
+                            <span class="project-category">Interactive</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <h3 class="project-card-title">Animated Proposal</h3>
+                        <p class="project-card-desc">A romantic web experience with falling rose petals, floating hearts, and a typewriter proposal message. The "No" button playfully runs away on hover. Built with pure CSS animations and JavaScript.</p>
+                        <div class="project-card-tech">
+                            <span>CSS Animation</span>
+                            <span>JavaScript</span>
+                            <span>Interactive</span>
+                        </div>
+                        <div class="project-card-actions">
+                            <a href="projects/animated-proposal/index.html" class="project-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                    <path d="M15 3h6v6"/>
+                                    <path d="M10 14L21 3"/>
+                                </svg>
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/technicalhasnain723" target="_blank" class="project-link secondary">
+                                <img src="web img/25231.png" alt="GitHub" style="width:16px;height:16px;border-radius:50%;object-fit:cover;">
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: Birthday Wishes -->
+                <article class="project-card-v2" data-category="interactive animation">
+                    <div class="project-card-visual">
+                        <div class="project-preview" style="background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%);">
+                            <div class="preview-birthday">
+                                <div class="preview-cake">
+                                    <span>🎂</span>
+                                    <div class="preview-flame">🔥</div>
+                                </div>
+                                <div class="preview-confetti">
+                                    <span style="--d:0s">🎉</span>
+                                    <span style="--d:0.3s">🎊</span>
+                                    <span style="--d:0.6s">✨</span>
+                                </div>
+                            </div>
+                            <div class="preview-overlay">
+                                <a href="projects/birthday-wishes/index.html" class="preview-btn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                        <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                    Open Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <div class="project-card-meta">
+                            <span class="project-category">Interactive</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <h3 class="project-card-title">Birthday Wishes</h3>
+                        <p class="project-card-desc">An animated birthday celebration featuring floating balloons, confetti explosions, a flickering candle, and personalized messages. Customize the name and make someone's day special with pure code.</p>
+                        <div class="project-card-tech">
+                            <span>Canvas API</span>
+                            <span>CSS Animation</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-card-actions">
+                            <a href="projects/birthday-wishes/index.html" class="project-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                    <path d="M15 3h6v6"/>
+                                    <path d="M10 14L21 3"/>
+                                </svg>
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/technicalhasnain723" target="_blank" class="project-link secondary">
+                                <img src="web img/25231.png" alt="GitHub" style="width:16px;height:16px;border-radius:50%;object-fit:cover;">
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4: Template for user -->
+                <article class="project-card-v2" data-category="webapp">
+                    <div class="project-card-visual">
+                        <div class="project-preview" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);">
+                            <div class="preview-placeholder">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                    <path d="M3 9h18M9 21V9"/>
+                                </svg>
+                                <span>Your Project</span>
+                            </div>
+                            <div class="preview-overlay">
+                                <a href="projects/your-project/index.html" class="preview-btn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                        <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                    View Template
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <div class="project-card-meta">
+                            <span class="project-category">Web App</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <h3 class="project-card-title">Your Next Project</h3>
+                        <p class="project-card-desc">This is a template folder ready for your next creation. Copy this folder, rename it, and replace the content with your own project code. It's that simple!</p>
+                        <div class="project-card-tech">
+                            <span>Template</span>
+                            <span>Ready to Use</span>
+                        </div>
+                        <div class="project-card-actions">
+                            <a href="projects/your-project/index.html" class="project-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                    <path d="M15 3h6v6"/>
+                                    <path d="M10 14L21 3"/>
+                                </svg>
+                                View Template
+                            </a>
+                            <span class="project-link secondary disabled">
+                                <img src="web img/25231.png" alt="GitHub" style="width:16px;height:16px;border-radius:50%;object-fit:cover;">
+                                Add Your Code
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Have a project idea?</h2>
+                <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
+                <a href="contact.html" class="btn btn-primary">
+                    Let's Talk
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14m-7-7l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo-bracket">&lt;</span>Hasnain<span class="logo-bracket">/&gt;</span>
+                    </a>
+                    <p>Building the web, one pixel at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://github.com/technicalhasnain723" target="_blank">
+                        <img src="web img/25231.png" alt="GitHub" style="width:16px;height:16px;border-radius:50%;object-fit:cover;vertical-align:middle;margin-right:6px;">GitHub
+                    </a>
+                    <a href="https://instagram.com/technical_.hasnain" target="_blank">
+                        <img src="web img/images.jpg" alt="Instagram" style="width:16px;height:16px;border-radius:50%;object-fit:cover;vertical-align:middle;margin-right:6px;">Instagram
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Hasnain. Crafted with ❤️ and lots of ☕</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
