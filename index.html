@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasnain — Developer & Creator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<base target="_blank">
+<base target="_blank">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-spinner"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-bracket">&lt;</span>Hasnain<span class="logo-bracket">/&gt;</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-link active">Home</a>
+        <a href="projects.html" class="mobile-link">Projects</a>
+        <a href="blog.html" class="mobile-link">Blog</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Available for freelance
+            </div>
+            <h1 class="hero-title">
+                Hi, I'm <span class="gradient-text">Hasnain</span>
+            </h1>
+            <p class="hero-subtitle">
+                I build <span class="typing-text" id="typingText"></span><span class="typing-cursor">|</span>
+            </p>
+            <p class="hero-desc">
+                A passionate web developer crafting beautiful, interactive experiences. 
+                I turn ideas into reality through clean code and creative design.
+            </p>
+            <div class="hero-buttons">
+                <a href="projects.html" class="btn btn-primary">
+                    View My Work
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14m-7-7l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+            </div>
+            <div class="hero-socials">
+                <a href="https://github.com/technicalhasnain723" target="_blank" class="social-link" aria-label="GitHub">
+                    <img src="web img/images.png" alt="GitHub" style="width:20px;height:20px;border-radius:50%;object-fit:cover;">
+                </a>
+                <a href="https://instagram.com/technical_.hasnain" target="_blank" class="social-link" aria-label="Instagram">
+                    <img src="web img/images.jpg" alt="Instagram" style="width:20px;height:20px;border-radius:50%;object-fit:cover;">
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-count="50">0</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="3">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="25">0</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="100">0</div>
+                    <div class="stat-label">Cups of Coffee</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Preview (Dynamic) -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Featured Work</span>
+                <h2 class="section-title">Recent Projects</h2>
+                <p class="section-desc">A glimpse of what I've been building lately</p>
+            </div>
+            <!-- 🔥 Yahan JavaScript cards render karega -->
+            <div class="featured-grid" id="featuredGrid">
+                <!-- Cards auto-generate honge -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Expertise</span>
+                <h2 class="section-title">Tech Stack</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">⚡</div>
+                    <h4>Frontend</h4>
+                    <p>HTML5, CSS3, JavaScript, React</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h4>Design</h4>
+                    <p>Figma, UI/UX, Animations</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🔧</div>
+                    <h4>Tools</h4>
+                    <p>Git, GitHub, VS Code, Vercel</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📱</div>
+                    <h4>Responsive</h4>
+                    <p>Mobile-first, Flexbox, Grid</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo-bracket">&lt;</span>Hasnain<span class="logo-bracket">/&gt;</span>
+                    </a>
+                    <p>Building the web, one pixel at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://github.com/technicalhasnain723" target="_blank"><img src="web img/images.png" alt="GitHub" style="width:16px;height:16px;border-radius:50%;object-fit:cover;vertical-align:middle;margin-right:6px;">GitHub</a>
+                    <a href="https://instagram.com/technical_.hasnain" target="_blank">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Hasnain. Crafted with ❤️ and lots of ☕</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+    <!-- 🔥 FEATURED PROJECTS ARRAY — SIRF YAHAN ADD KARO -->
+    <script>
+        // ============================================================
+        //  SIRF IS ARRAY MEIN PROJECT ADD KARO — BAaki SAB AUTOMATIC!
+        // ============================================================
+        const featuredProjects = [
+            {
+                title: "Spider-animation",
+                desc: "An interactive Spider-Man mask that tracks your mouse movement with realistic eye animations.",
+                image: "web img/spider_featured_image.png",
+                tag: "Animation",
+                link: "projects.html"
+            },
+            {
+                title: "Animated Proposal",
+                desc: "A beautiful animated proposal with falling rose petals, floating hearts, and an interactive yes/no.",
+                image: "web img/proposal_featured.png",
+                tag: "Romantic",
+                link: "projects.html",
+                bgGradient: "linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%)"
+            },
+            {
+                title: "Birthday Wishes",
+                desc: "Celebrate special moments with animated balloons, confetti, and personalized birthday messages.",
+                image: "web img/birthday_featured.png",
+                tag: "Celebration",
+                link: "projects.html",
+                bgGradient: "linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)"
+            }
+            // 👇 Naya project? Bas yahan add karo — comma lagake!
+        ];
+
+        // Render featured cards
+        const grid = document.getElementById('featuredGrid');
+
+        featuredProjects.forEach((project, index) => {
+            const card = document.createElement('div');
+            card.className = 'featured-card';
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+
+            const imgStyle = project.bgGradient 
+                ? `style="background: ${project.bgGradient};"` 
+                : '';
+
+            card.innerHTML = `
+                <div class="featured-image" ${imgStyle}>
+                    <img src="${project.image}" alt="${project.title}" loading="lazy" onerror="this.style.display='none'">
+                    <div class="featured-overlay"></div>
+                </div>
+                <div class="featured-content">
+                    <span class="featured-tag">${project.tag}</span>
+                    <h3>${project.title}</h3>
+                    <p>${project.desc}</p>
+                    <a href="${project.link}" class="featured-link">View Project →</a>
+                </div>
+            `;
+
+            grid.appendChild(card);
+
+            // Staggered entrance animation
+            setTimeout(() => {
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, index * 150);
+        });
+    </script>
+</body>
+</html>
